@@ -1,0 +1,28 @@
+@startuml
+
+skinparam actorstyle hollow
+left to right direction
+
+:Client: as Client
+:Empleat: as Empleat
+
+package Caixer{
+    (Identificador) as (id)
+    (Canvia_Pin)
+    (Treure_Diners)
+    (Consultar_Saldo)
+    (Consultar_ultims_moviments)
+    (Reposar_Diners)
+    
+}
+
+
+Client --> (id)
+Client -->(Treure_Diners)
+Client --> (Consultar_Saldo)
+Client --> (Canvia_Pin)
+Client --> (Consultar_ultims_moviments)
+Empleat --> (Reposar_Diners)
+
+
+@enduml
