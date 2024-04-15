@@ -1,5 +1,6 @@
 @startuml
 
+left to right direction
 
 :Empresa:
 :Xofers:
@@ -28,13 +29,15 @@ Empresa-->Viatges
 (Viatges)..>Desti
 (Viatges)..>Horari
 (Lliure)..>(Xofer):  Include
-Empresa-->(Cancelar)
-Empresa-->(Confirmar)
 (Alta)..>(Client):  si el client no està donat d'alta
 Xofers-->Horari: Select
 Gerent--> Cotxe
 Gerent-->diners
 (Xofer)..>diners: Include
+(Cancelar)..>(Alta): include
+(Confirmar)..>(Alta): include
+(Cancelar)..>(Viatges): include
+(Confirmar)..>(Viatges): include
 
 
 
