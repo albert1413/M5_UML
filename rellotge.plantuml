@@ -1,0 +1,20 @@
+@startuml
+
+state Rellotge {
+    [*] --> Mostra_Hora
+    Mostra_Hora: Hores i minuts actuals
+    Mostra_Hora --> Seleccionar_Hores: A
+    Seleccionar_Hores: Hores Parpadegen
+    Seleccionar_Hores --> Seleccionar_Minuts: A
+    Seleccionar_Minuts: Minuts Parpadegen
+    Seleccionar_Hores --> Canviar_Hores: B
+    Canviar_Hores--> Seleccionar_Minuts: A
+    Canviar_Hores --> Canviar_Hores: B
+    Seleccionar_Minuts -->Canviar_Minuts: B
+    Canviar_Minuts--> Canviar_Minuts: B
+
+}
+Seleccionar_Minuts-->[*]: A
+Canviar_Minuts-->[*]: A
+
+@enduml
