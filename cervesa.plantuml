@@ -7,15 +7,19 @@ participant Sistema
 
 Client->Empleat: Truca a l'empresa
 Empleat->Sistema: Genera fitxa Client
+Sistema-> FitxaClient: Crea llista
 Empleat --> Client: Solicita Nom del Client
 Client -> Empleat: Li dona el nom
 Empleat -> Sistema: Retorna el Nom del Client
+Sistema-> FitxaClient: Introdueix Nom
 Empleat --> Client: Solicita Cognom del Client
 Client -> Empleat: Li dona el Cognom
 Empleat -> Sistema: Retorna el Cognom del Client
+Sistema-> FitxaClient: Introdueix Cognom
 Empleat --> Client: Solicita DNI del Client
 Client -> Empleat: Li dona el DNI
 Empleat -> Sistema: Retorna el DNI del Client
+Sistema-> FitxaClient: Introdueix DNI
 Sistema->Sistema: Guarda el registre del nou client
 
 @enduml
