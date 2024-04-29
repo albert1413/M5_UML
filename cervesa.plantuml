@@ -1,8 +1,8 @@
 
 @startuml
 
-participant Client 
-participant Empleat
+actor Client 
+actor Empleat
 participant Sistema
 
 Client->Empleat: Truca a l'empresa
@@ -20,6 +20,6 @@ Empleat --> Client: Solicita DNI del Client
 Client -> Empleat: Li dona el DNI
 Empleat -> Sistema: Retorna el DNI del Client
 Sistema-> FitxaClient: Introdueix DNI
-Sistema->Sistema: Guarda el registre del nou client
+FitxaClient-->Sistema: Guarda el registre del nou client
 
 @enduml
