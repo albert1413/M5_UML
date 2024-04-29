@@ -1,22 +1,21 @@
+
 @startuml
 
-participant Sistema
-participant Empleat
 participant Client 
+participant Empleat
+participant Sistema
 
-Sistema->Sistema: Crear Fitxar de client
-Sistema -> Empleat: Solicita Nom del Client
-Empleat -> Client: Pregunta Nom
-Client --> Empleat: Li dona el nom
-Empleat --> Sistema: Retorna el Nom del Client
-Sistema -> Empleat: Solicita Cognom del Client
-Empleat -> Client: Pregunta Cognom
-Client --> Empleat: Li dona el Cognom
-Empleat --> Sistema: Retorna el Cognom del Client
-Sistema -> Empleat: Solicita DNI del Client
-Empleat -> Client: Pregunta DNI
-Client --> Empleat: Li dona el DNI
-Empleat --> Sistema: Retorna el DNI del Client
+Client->Empleat: Truca a l'empresa
+Empleat->Sistema: Genera fitxa Client
+Empleat --> Client: Solicita Nom del Client
+Client -> Empleat: Li dona el nom
+Empleat -> Sistema: Retorna el Nom del Client
+Empleat --> Client: Solicita Cognom del Client
+Client -> Empleat: Li dona el Cognom
+Empleat -> Sistema: Retorna el Cognom del Client
+Empleat --> Client: Solicita DNI del Client
+Client -> Empleat: Li dona el DNI
+Empleat -> Sistema: Retorna el DNI del Client
 Sistema->Sistema: Guarda el registre del nou client
 
 @enduml
